@@ -35,7 +35,7 @@ addOne(-5) //=> -4
 // Your solution for 01-addOne here:
 
 
-
+addOne = (singleNumber) => singleNumber += 1
 
 
 /*-----------------------------------------------------------------------------
