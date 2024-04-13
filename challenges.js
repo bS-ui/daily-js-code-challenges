@@ -107,7 +107,7 @@ addList(7,-12) //=> -5
 // Your solution for 04-addList here:
 
 
-
+addList = (...numberList) => numberList.reduce((a,c) => a + c, 0)
 
 
 /*-----------------------------------------------------------------------------
