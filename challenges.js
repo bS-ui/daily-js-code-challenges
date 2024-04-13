@@ -83,7 +83,7 @@ sumNumbers([]) //=> 0
 // Your solution for 03-sumNumbers here:
 
 
-
+sumNumbers = (numberArray) => numberArray.reduce((a,c) => a + c, 0)
 
 
 /*-----------------------------------------------------------------------------
