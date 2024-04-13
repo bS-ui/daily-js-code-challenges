@@ -59,7 +59,7 @@ addTwoNumbers('Hello', 5) //=> NaN
 // Your solution for 02-addTwoNumbers here:
 
 
-
+addTwoNumbers = (numberOne, numberTwo) => isNaN(numberOne) || isNaN(numberTwo) ? NaN : numberOne + numberTwo
 
 
 /*-----------------------------------------------------------------------------
