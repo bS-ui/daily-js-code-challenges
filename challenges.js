@@ -182,7 +182,7 @@ reverseUpcaseString("SEI Rocks!") //=> "!SKCOR IES"
 // Your solution for 07-reverseUpcaseString here:
 
 
-
+reverseUpcaseString = (string) => [...string].reverse().join("").toUpperCase()
 
 
 /*-----------------------------------------------------------------------------
