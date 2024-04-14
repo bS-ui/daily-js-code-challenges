@@ -134,7 +134,7 @@ computeRemainder(10.5, 3) //=> 1.5
 // Your solution for 05-computeRemainder:
 
 
-
+computeRemainder = (dividend, divisor) => divisor == 0 ? Infinity : dividend % divisor
 
 
 /*-----------------------------------------------------------------------------
