@@ -204,7 +204,7 @@ removeEnds('a') //=> "" (empty string)
 // Your solution for 08-removeEnds here:
 
 
-
+removeEnds = (string) => string.slice(1,-1)
 
 
 /*-----------------------------------------------------------------------------
