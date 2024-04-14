@@ -161,7 +161,7 @@ range(5,2) //=> "First argument must be less than second"
 // Your solution for 06-range here:
 
 
-
+range = (from, to) => to > from ? [...Array(to-from).keys()].map(i => i + from) : to == from ? [] : "First argument must be less than second"
 
 
 /*-----------------------------------------------------------------------------
