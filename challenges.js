@@ -245,8 +245,17 @@ charCount('Today is fantastic!')
 -----------------------------------------------------------------------------*/
 // Your solution for 09-charCount here:
 
-
-
+charCount = ([...string]) => {
+  charCount = {}
+  string.forEach(letter => {
+    if (!charCount[letter]) {
+      charCount[letter] = 1
+    } else {
+      charCount[letter] += 1
+    }
+  })
+  return charCount
+}
 
 
 /*-----------------------------------------------------------------------------
