@@ -285,7 +285,18 @@ formatWithPadding(1234, '*', 3) //=> "1234"
 // Your solution for 10-formatWithPadding here:
 
 
-
+formatWithPadding = (number, char, padding) => {
+  newString = ""
+  if (String(number).length > padding) {
+    return String(number)
+  } else {
+    for(let i = 0; i < padding-String(number).length; i++) {
+      newString = newString + char
+    }
+    newString = newString + String(number)
+    return newString
+  }
+}
 
 
 /*-----------------------------------------------------------------------------
