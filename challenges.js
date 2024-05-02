@@ -324,7 +324,7 @@ isPalindrome('') //=> true
 // Your solution for 11-isPalindrome here:
 
 
-
+isPalindrome = ([...string]) => string.join('').replaceAll(' ', '').toLowerCase() == string.reverse().join('').replaceAll(' ', '').toLowerCase() ? true : false
 
 
 /*-----------------------------------------------------------------------------
