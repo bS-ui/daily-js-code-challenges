@@ -354,7 +354,18 @@ hammingDistance('abc', 'ab') //=> NaN
 // Your solution for 12-hammingDistance here:
 
 
-
+hammingDistance = ([...string], [...string2]) => {
+  let hamCount = 0
+  if (string2.length < string.length) {
+    return NaN
+  }
+  string.forEach((letter,idx) => {
+    if (string[idx] !== string2[idx]) {
+      hamCount += 1
+    }
+  })
+  return hamCount
+}
 
 
 /*-----------------------------------------------------------------------------
