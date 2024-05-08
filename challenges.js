@@ -392,7 +392,15 @@ mumble('!A 2') //=> '!-AA-   -2222'
 // Your solution for 13-mumble here:
 
 
-
+mumble = ([...string]) => {
+  let newString = ''
+  string.forEach((letter,idx) => {
+    for (let i = 0; i < idx+1; i++) {
+      newString = newString + letter
+    }
+  })
+  return newString
+}
 
 
 /*-----------------------------------------------------------------------------
