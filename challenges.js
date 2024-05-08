@@ -425,7 +425,14 @@ fromPairs([ ['name', 'Sam"], ['age', 24], ['name', 'Sally'] ]) //=> { name: "Sal
 // Your solution for 14-fromPairs here:
 
 
-
+fromPairs = (mainArray) => {
+  let object = {}
+  console.log(object)
+  mainArray.forEach(childArray => {
+    object[childArray[0]] = childArray[1]
+  })
+  return object
+}
 
 
 /*-----------------------------------------------------------------------------
