@@ -427,7 +427,6 @@ fromPairs([ ['name', 'Sam"], ['age', 24], ['name', 'Sally'] ]) //=> { name: "Sal
 
 fromPairs = (mainArray) => {
   let object = {}
-  console.log(object)
   mainArray.forEach(childArray => {
     object[childArray[0]] = childArray[1]
   })
@@ -463,7 +462,17 @@ mergeObjects({a: 1, b: 2, c: 3}, {d: 4}, {b: 22, d: 44})
 // Your solution for 15-mergeObjects here:
 
 
-
+mergeObjects = (...objects) => {
+  let firstObject = objects.shift()
+  for (let i = 0; i < objects.length; i++) {
+    for (let x = 0; x < objects[i].length; x++) {
+      let childArray = objects[i][x]
+      firstObject[childArray[0]] = childArray[0+1]
+    }
+  }
+  console.log(first)
+  return firstObject
+}
 
 
 /*-----------------------------------------------------------------------------
@@ -505,7 +514,15 @@ findHighestPriced([
 // Your solution for 16-findHighestPriced here:
 
 
-
+findHighestPriced = (objects) => {
+  let highest = objects[0]
+  for (let i = 1; i < objects.length; i++) {
+    if (objects[i].price > highest.price) {
+      highest = objects[i]
+    }
+  }
+  return highest
+}
 
 
 /*-----------------------------------------------------------------------------
@@ -543,7 +560,13 @@ mapArray( ['rose', 'tulip', 'daisy'], function(f, i) {
 // Your solution for 17-mapArray here:
 
 
-
+mapArray = (arr, cb) => {
+  let newArr = []
+  for (let i = 0; i < arr.length; i++) {
+    newArr.push(cb(arr[i], i))
+  }
+  return newArr
+}
 
 
 /*-----------------------------------------------------------------------------
@@ -594,6 +617,13 @@ reduceArray( ['Yes', 'No', 'Yes', 'Maybe'], function(acc, v) {
 // Your solution for 18-reduceArray here:
 
 
+reduceArray = (arr, cb, val) => {
+  let result = cb(val, arr[0], 0)
+  for (let i = 1; i < arr.length; i++) {
+    result = cb(result, arr[i], i)
+  }
+  return result
+}
 
 
 /*-----------------------------------------------------------------------------
@@ -621,6 +651,22 @@ isPrime(200) //=> false
 
 
 
+isPrime = (num) => {
+  let prime = false
+  if (num <= 1) return false
+  if (!Number.isInteger(num)) return false
+  for (let i = 2; i < num; i++) {
+    if (num % i == 0) {
+      prime = true
+    }
+  }
+  if (prime) {
+    return false
+  } else {
+    return true
+  }
+
+}
 
 
 /*-----------------------------------------------------------------------------
@@ -647,7 +693,6 @@ intersection(['a', 1], [true, 'a', 15]) //=> ['a']
 intersection([1, 'a', true, 1, 1], [true, 1, 'b', 1]) //=> [1, true, 1]
 -----------------------------------------------------------------------------*/
 // Your solution for 20-intersection here:
-
 
 
 
